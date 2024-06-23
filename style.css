@@ -10,6 +10,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  border: 2px red solid;
 }
 
 /* Center the content */
@@ -49,6 +50,11 @@ body {
   margin: 30px 0;
 }
 
+.wrapper #profile-form {
+  margin-top: 60px; /* Adjust this value as needed */
+}
+
+
 .input-box input {
   width: 100%;
   height: 100%;
@@ -59,6 +65,18 @@ body {
   font-size: 16px;
   color: #fff;
   padding: 20px 45px 20px 20px;
+}
+
+.input-box select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;  
 }
 
 .input-box input::placeholder {
@@ -128,43 +146,86 @@ body {
   text-decoration: underline;
 }
 
-/* Custom select box styling */
-.custom-select,
-.bootstrap-select .dropdown-toggle {
+.input-box select {
   width: 100%;
-  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-box select#select-menus{
+  width: 100%;
+  height: 100%;
   background: transparent;
   outline: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
-  color: #fff;
-  padding: 10px 20px; /* Ensure it matches input box padding */
-  margin: 30px 0; /* Same as input box margin */
-  display: flex;
-  align-items: center;
+  color: white;
 }
 
-/* Dropdown menu styling */
-.bootstrap-select .dropdown-toggle .filter-option {
-  background-color: transparent !important;
+.input-box select#skill-select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
 }
 
-.bootstrap-select .dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent dropdown */
-  border-radius: 20px; /* Rounded corners */
+option {
+  color: black;
 }
 
-.bootstrap-select .dropdown-toggle::after {
-  display: none; /* Hide default arrow */
+button.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Ensure consistent border and padding for select options */
-.bootstrap-select .dropdown-menu .inner {
-  border: none !important;
+button.btn:hover {
+  background-color: #0056b3;
 }
 
-.bootstrap-select .dropdown-menu .inner li a {
-  padding: 10px 20px !important;
-  color: #333;
+.remove-date-btn {
+  margin-left: 10px;
+  background-color: red;
+}
+
+.date-entry {
+  margin: 10px 10px;
+}
+
+button.skill-add {
+  width: 20%;
+  height: 100%;
+  background: green;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0px;
+  display: block; /* Ensure it is block-level */
+}
+
+
+button.skill-add:hover {
+  background-color: #eee; /* Example hover background color */
+}
+
+.input-box.date-box {
+  margin-top: 20px; /* Example margin */
+}
+
+#skill-list {
+  margin-top: 80px;
 }
