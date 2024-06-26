@@ -14,12 +14,46 @@
                 <input type="text" placeholder="Event Name" maxlength="100" required>
             </div>
             <div class="input-box">
-                <textarea placeholder="Event Description" rows="5" required></textarea>
+                <textarea placeholder="Event Description" rows="5" cols="5" class="desc-box"></textarea>
             </div>
+
             <div class="input-box">
-                <textarea placeholder="Location" rows="2" required></textarea>
+                <textarea placeholder="Location" rows="2" required class="location-box"></textarea>
             </div>
+
+            <div class="input-box">
+                <select id="skill-select" name="skills" required>
+                  <option value="">Select Skill</option>
+                  <option value="Management">Management</option>
+                  <option value="Leadership">Leadership</option>
+                  <option value="Design">Design</option>
+                  <option value="Communication">Communication</option>
+                </select>
+        
+                <button class="skill-add">Add</button>
+              </div>
+        
+              <div id="skill-list">
+                <!-- Dynamically added skills will appear here -->
+              </div>
+
+              <div class="input-box">
+                <select id="select-menus" name="state" required>
+                    <option value="">Select Urgency</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+              </div>
+        
+              <div class="input-box date-box">
+                <label for="availability">Date of Event:</label>
+                <input type="date" id="availability" name="availability" required>
+              </div>
+        
         </form>
     </div>
+
+    <script src="../script.js"></script>
 </body>
 </html>
