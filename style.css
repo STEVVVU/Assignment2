@@ -1,231 +1,222 @@
-/* Ensure HTML and body take full height and width */
-html, body {
-  height: 100%;
-  width: 100%;
-}
+html,body {
+  height:100%;
+  width:100%
+  }
+  
+  * {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif
+  }
+  
+  body {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:url(./images/giphy.gif);
+  background-size:cover;
+  background-position:center
+  }
+  
+  .wrapper {
+  width:420px;
+  background:transparent;
+  border:2px solid #fff3;
+  color:#fff;
+  border-radius:100px;
+  padding:30px 40px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 10px #0003
+  }
+  
+  .wrapper h1 {
+  font-size:36px;
+  text-align:center
+  }
+  
+  .wrapper .input-box {
+  position:relative;
+  width:100%;
+  height:50px;
+  margin:30px 0
+  }
 
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  border: 2px red solid;
-}
+  .wrapper #profile-form {
+    margin-top:40px
+  }
+  
+  .input-box input {
+  width:100%;
+  height:100%;
+  background:transparent;
+  outline:none;
+  border:2px solid #fff3;
+  border-radius:40px;
+  font-size:16px;
+  color:#fff;
+  padding:20px 45px 20px 20px
+  }
+  
+  .input-box select {
+  width:100%;
+  height:100%;
+  background:transparent;
+  outline:none;
+  border:2px solid #fff3;
+  border-radius:40px;
+  font-size:16px;
+  color:#fff;
+  padding:20px 45px 20px 20px
+  }
+  
+  .input-box input::placeholder {
+  color:#fff
+  }
+  
+  .input-box i {
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:20px
+  }
+  
+  .wrapper .remember-forgot {
+  display:flex;
+  justify-content:space-between;
+  font-size:14.5px;
+  margin:-15px 0 15px
+  }
+  
+  .remember-forgot label input {
+  accent-color:#fff;
+  margin-right:3px
+  }
+  
+  .remember-forgot a {
+  color:#fff;
+  text-decoration:none
+  }
+  
+  .remember-forgot a:hover {
+  text-decoration:underline
+  }
+  
+  .wrapper .btn {
+  width:100%;
+  height:45px;
+  background:#fff;
+  border:none;
+  outline:none;
+  border-radius:40px;
+  box-shadow:0 0 10px #0000001a;
+  cursor:pointer;
+  font-size:16px;
+  color:#333;
+  font-weight:600
+  }
+  
+  .wrapper .register-link {
+  font-size:14.5px;
+  text-align:center;
+  margin:20px 0 15px
+  }
+  
+  .register-link p a {
+  color:#fff;
+  text-decoration:none;
+  font-weight:600
+  }
+  
+  .register-link p a:hover {
+  text-decoration:underline
+  }
+  
+  .input-box select {
+  width:100%;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  box-sizing:border-box
+  }
+  
+  .input-box select#select-menus {
+  width:100%;
+  height:100%;
+  background:transparent;
+  outline:none;
+  border:2px solid #fff3;
+  border-radius:40px;
+  font-size:16px;
+  color:#fff
+  }
+  
+  .input-box select#skill-select {
+  width:100%;
+  height:100%;
+  background:transparent;
+  outline:none;
+  border:2px solid #fff3;
+  border-radius:40px;
+  font-size:16px;
+  color:#fff
+  }
+  
+  option {
+  color:#000
+  }
+  
+  button.btn {
+  width:100%;
+  padding:10px;
+  background-color:#007bff;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer
+  }
+  
+  button.btn:hover {
+  background-color:#0056b3
+  }
+  
+  .remove-date-btn,.remove-skill-btn {
+  margin-left:10px;
+  background-color:red
+  }
+  
+  .date-entry {
+  margin:10px
+  }
+  
+  button.skill-add {
+  width:20%;
+  height:100%;
+  background:green;
+  outline:none;
+  border:2px solid #fff3;
+  border-radius:40px;
+  font-size:16px;
+  color:#fff;
+  cursor:pointer;
+  margin:10px 0;
+  display:block
+  }
+  
+  button.skill-add:hover {
+  background-color:#eee
+  }
+  
+  .input-box.date-box {
+  margin-top:20px
+  }
+  
+  #skill-list {
+  margin-top:80px
+  }
 
-/* Center the content */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url(./images/giphy.gif);
-  background-size: cover;
-  background-position: center;
-}
-
-/* Wrapper for the form */
-.wrapper {
-  width: 420px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
-  color: #fff;
-  border-radius: 100px;
-  padding: 30px 40px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-}
-
-/* Form header */
-.wrapper h1 {
-  font-size: 36px;
-  text-align: center;
-}
-
-/* Input box styling */
-.wrapper .input-box {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin: 30px 0;
-}
-
-.wrapper #profile-form {
-  margin-top: 60px; /* Adjust this value as needed */
-}
-
-
-.input-box input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: #fff;
-  padding: 20px 45px 20px 20px;
-}
-
-.input-box select {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: #fff;
-  padding: 20px 45px 20px 20px;  
-}
-
-.input-box input::placeholder {
-  color: #fff ;
-}
-
-/* Icon inside input box */
-.input-box i {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-}
-
-/* Remember and forgot section */
-.wrapper .remember-forgot {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
-}
-
-.remember-forgot label input {
-  accent-color: #fff;
-  margin-right: 3px;
-}
-
-.remember-forgot a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-
-/* Button styling */
-.wrapper .btn {
-  width: 100%;
-  height: 45px;
-  background: #fff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Register link styling */
-.wrapper .register-link {
-  font-size: 14.5px;
-  text-align: center;
-  margin: 20px 0 15px;
-}
-
-.register-link p a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-link p a:hover {
-  text-decoration: underline;
-}
-
-.input-box select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.input-box select#select-menus{
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: white;
-}
-
-.input-box select#skill-select {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: white;
-}
-
-option {
-  color: black;
-}
-
-button.btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button.btn:hover {
-  background-color: #0056b3;
-}
-
-.remove-date-btn {
-  margin-left: 10px;
-  background-color: red;
-}
-
-.date-entry {
-  margin: 10px 10px;
-}
-
-button.skill-add {
-  width: 20%;
-  height: 100%;
-  background: green;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  margin: 10px 0px;
-  display: block; /* Ensure it is block-level */
-}
-
-
-button.skill-add:hover {
-  background-color: #eee; /* Example hover background color */
-}
-
-.input-box.date-box {
-  margin-top: 20px; /* Example margin */
-}
-
-#skill-list {
-  margin-top: 80px;
-}
+  .description-box {
+    height: 20px;
+  }
