@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Matching Form</title>
+    <link rel="stylesheet" href="../styles/volunteer-matching.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Volunteer Matching Form</h1>
+        <form id="volunteerMatchingForm">
+            <div class="form-group">
+                <label for="volunteerName">Volunteer Name:</label>
+                <input type="text" id="volunteerName" name="volunteerName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="matchedEvent">Matched Event:</label>
+                <input type="text" id="matchedEvent" name="matchedEvent" readonly>
+            </div>
+            <div class="form-group">
+                <label for="volunteerSelect">Select Volunteer:</label>
+                <select id="volunteerSelect" name="volunteerSelect" required>
+                    <option value="">Choose a volunteer</option>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eventSelect">Select Event:</label>
+                <select id="eventSelect" name="eventSelect" required>
+                    <option value="">Choose an event</option>
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <button type="submit">Match Volunteer to Event</button>
+        </form>
+    </div>
+
+<script src="../scripts/volunteer-matching.js"></script>
+</body>
+</html>
